@@ -7,23 +7,22 @@
   <body>
     <header class="page-header">
       <nav class="header-nav">
-        <h2 class="visually-hidden">Главная навигация сайта Седона</h2>
-        <a href="">
-          <img class="header-logo" src="" width="140" height="72" alt="Седона – бронирование гостиниц">
+        <h2 class="visually-hidden">Главное меню сайта Седона</h2>
+        <a href="index.html">
+          <img class="header-logo" src="img/logo.svg" width="140" height="72" alt="Седона – бронирование гостиниц. Логотип">
         </a>
         <ul>
           <li><a href="#">Информация</a></li>
           <li><a href="#">Фото и видео</a></li>
           <li><a href="#">Карта штата</a></li>
-          <li><a href="#">Гостиницы</a></li>
+          <li><a href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
     <main class="site-content">
       <section class="welcome">
-        <h1 class="visually-hidden">Седона - поиск гостиниц</h1>
-        <div class="welcome-titles">
-        </div>
+        <h1 class="visually-hidden">Седона – бронирование гостиниц</h1>
+        <img class="welcome-titles" src="img/welcome.svg" width="459" height="353" alt="Добро пожаловать в великолепную седону. Потому что Большой Каньон отстой">
       </section>
       <section class="advantages">
         <h2 class="advantages-causes-title">Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
@@ -31,9 +30,12 @@
         <ul>
           <li class="advantages-cause-one">
             <div class="cause-content">
-              <h3 class="cause-title">Настоящий городок</h3>
-              <p class="cause-number">№1</p>
-              <p class="cause-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              <div class="cause-text-content">
+                <h3 class="cause-title">Настоящий городок</h3>
+                <p class="cause-number">№1</p>
+                <p class="cause-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+              </div>
+              <img src="img/real-town.jpg" width="800" height="401" alt="Городок Седона. Вид">
             </div>
             <div class="cause-housing">
               <b class="cause-title">Жилье</b>
@@ -50,9 +52,12 @@
           </li>
           <li class="advantages-cause-two">
             <div class="cause-content">
-              <h3 class="cause-title">Там есть Мост дьявола</h3>
-              <p class="cause-number">№2</p>
-              <p class="cause-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <div class="cause-text-content">
+                <h3 class="cause-title">Там есть Мост дьявола</h3>
+                <p class="cause-number">№2</p>
+                <p class="cause-description">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              </div>
+              <img src="img/devil-bridge.jpg" width="800" height="400" alt="Мост дьявола. Вид">
             </div>
           </li>
           <li class="advantages-cause-three">
@@ -78,8 +83,24 @@
         <p class="search-slogan">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
         <a class="search-link">Поиск гостиницы в седоне</a>
         <form class="search-popup" action="https://echo.htmlacademy.ru" method="get">
-          <!-- Здесь будут поля формы -->
+          <label>Дата заезда:
+            <input type="text" name="arrival-date">
+          </label>
+          <label>Дата заезда:
+            <input type="text" name="arrival-date" value="24 апреля 2017">
+          </label>
+          <label>Дата выезда:
+            <input type="text" name="departure-date" value="24 июля 2017">
+          </label>
+          <label>Взрослые:
+            <input type="text" name="departure-date" value="2">
+          </label>
+          <label>Дети:
+            <input type="text" name="departure-date" value="0">
+          </label>
+          <button type="submit">Найти</button>
         </form>
+        <img src="img/map.jpg" width="1200" height="593" alt="Седона на карте">
       </section>
       <footer class="page-footer">
         <p class="footer-hashtag" aria-label="Хештэг">#visitsedona</p>
@@ -88,7 +109,7 @@
           <li><a class="social-btn social-btn-facebook" href="">Фейсбук</a></li>
           <li><a class="social-btn social-btn-youtube" href="">Ютуб</a></li>
         </ul>
-        <p class="footer-production">Website by <img src="" width="115" height="41" alt="HTML-Academy"></p>
+        <p class="footer-production" lang="en">Website by <img src="" width="115" height="41" alt="HTML-Academy"></p>
       </footer>
     </main>
   </body>
