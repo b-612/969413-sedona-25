@@ -21,20 +21,34 @@ body {
   background-color: #f2f2f2;
 }
 
+/* Временная подсветка блоков  */
+
+/* Первый уровень вложенности */
+/* body > * {
+  background-color: rgba(255, 0, 0, 0.2);
+} */
+
+/* Второй уровень вложенности */
+/* body > * > * {
+  background-color: rgba(0, 255, 0, 0.2);
+} */
+
+/* Третий уровень вложенности */
+/* body > * > * > * {
+  background-color: rgba(255, 255, 0, 0.2);
+} */
+
+/* Четвертый уровень вложенности */
+/* body > * > * > * > * {
+  background-color: rgba(212, 0, 255, 0.2);
+} */
+
 .container {
   width: 1200px;
   margin: 0 auto;
 
   background-color: #ffffff;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.2);
-}
-
-.container-main {
-  padding: 0 50px;
-}
-
-.container-hotels {
-  padding: 0 73px;
 }
 
 .header-logo {
@@ -49,6 +63,11 @@ body {
   border-radius: 50%;
   outline: none;
   box-shadow: 0 1px 2px 1px #81b3d3;
+}
+
+.page-header {
+  padding-left: 51px;
+  padding-right: 51px;
 }
 
 .page-header,
@@ -73,6 +92,7 @@ body {
 
 .page-header ul {
   flex-wrap: wrap;
+  flex-shrink: 0;
   display: flex;
 
   padding: 14px 21px;
@@ -153,6 +173,9 @@ body {
 
 .advantages ul {
   flex-wrap: wrap;
+  flex-shrink: 0;
+  justify-content: center;
+
   display: flex;
 
   padding: 0;
@@ -160,6 +183,7 @@ body {
   margin-top: 51px;
 
   list-style-type: none;
+  background-color: #eeeeee;
 }
 
 .cause-content h3,
@@ -190,35 +214,60 @@ body {
   margin-top: auto;
 }
 
+.cause-content:nth-of-type(n + 3):not(:last-of-type) {
+  width: 400px;
+  padding-bottom: 36px;
+}
+
+.cause-content:nth-of-type(n + 3):not(:last-of-type) p {
+  width: 275px;
+}
+
 .cause-number {
   position: relative;
 }
 
 .cause-number::before {
-  content: "";
   position: absolute;
   top: 11px;
   left: 128px;
+  content: "";
+
   display: block;
   width: 8px;
   height: 1px;
+
   background-color: #ffffff;
 }
 
 .cause-number::after {
-  content: "";
   position: absolute;
   top: 11px;
   right: 128px;
+  content: "";
+
   display: block;
   width: 8px;
   height: 1px;
+
   background-color: #ffffff;
 }
 
 .cause-content:nth-child(n + 3) .cause-number::before,
 .cause-content:nth-child(n + 3) .cause-number::after {
   background-color: #000000;
+}
+
+.cause-content:nth-of-type(n + 3):not(:last-of-type) h3 {
+  margin-top: 46px;
+}
+
+.cause-content:nth-child(n + 3) .cause-number::before {
+  left: 111px;
+}
+
+.cause-content:nth-child(n + 3) .cause-number::after {
+  right: 113px;
 }
 
 .cause-text-content {
@@ -248,9 +297,11 @@ body {
 }
 
 .advantages .advantages-additional {
-  justify-content: center;
-  margin-top: 55px;
-  margin-bottom: 40px;
+  margin: 0;
+  padding-top: 55px;
+  padding-bottom: 40px;
+
+  background-color: #ffffff;
 }
 
 .advantages-additional li {
