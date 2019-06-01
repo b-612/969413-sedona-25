@@ -134,6 +134,7 @@ body {
   width: 100%;
   padding: 78px 0;
 
+  background-color: #F3F2EF;
   background-image:
     url('../img/polygon.svg'),
     url('../img/welcome-background.jpg');
@@ -353,6 +354,264 @@ body {
   background-image: url('../img/souvenirs.svg');
   background-repeat: no-repeat;
   background-size: 64px 76px;
+}
+
+.search {
+  position: relative;
+
+  padding-top: 50px;
+}
+
+.search-slogan-title {
+  display: block;
+  width: 576px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+}
+
+.search-slogan {
+  width: 576px;
+  margin: 0 auto;
+  margin-bottom: 47px;
+
+  line-height: 24px;
+  text-align: center;
+}
+
+.search-link {
+  display: block;
+  width: 568px;
+  padding: 30px 30px;
+  margin: 0 auto;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #766357;
+}
+
+.search-popup {
+  position: absolute;
+  top: 291px;
+  left: 50%;
+  z-index: 5;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  display: flex;
+  width: 568px;
+  padding: 55px;
+  margin: 0 auto;
+  transform: translate(-50%);
+
+  background-color: #ffffff;
+}
+
+.search-popup label {
+  position: relative;
+
+  display: block;
+  margin-top: 6px;
+
+  font-weight: bold;
+  line-height: 26px;
+}
+
+.search-popup input[type="text"] {
+  margin-bottom: 29px;
+  margin-left: auto;
+  padding: 6px 12px;
+  border: none;
+
+  font-weight: bold;
+  line-height: 26px;
+  text-transform: uppercase;
+
+  background-color: #f2f2f2;
+}
+
+.search-popup input[type="text"]:hover {
+  background-color: #ebebeb;
+}
+
+.search-popup input[type="text"]:focus {
+  background-color: #ffffff;
+  outline: none;
+  box-shadow: inset 0 0 0 2px #e5e5e5;
+}
+
+.search-popup input[name="arrival-date"],
+.search-popup input[name="departure-date"] {
+  width: 346px;
+  padding-right: 41px;
+}
+
+.calendar {
+  position: absolute;
+  top: 2px;
+  left: 428px;
+
+  width: 21px;
+  height: 22px;
+
+  background-image: url(../img/calendar.svg);
+  background-position: 0 -64px;
+  background-repeat: no-repeat;
+}
+
+.calendar:hover,
+.calendar:focus {
+  background-position: 0 -32px;
+
+  cursor: pointer;
+}
+
+.calendar:active {
+  background-position: 0 0;
+}
+
+.search-popup input[name="adults"],
+.search-popup input[name="children"] {
+  width: 38px;
+  padding-right: 5px;
+  padding-left: 5px;
+
+  text-align: center;
+}
+
+.search-popup input[name="adults"] {
+  margin-left: 0;
+}
+
+.search-popup label:last-of-type {
+  margin-left: auto;
+}
+
+.search-popup input[name="children"] {
+  margin-left: 0;
+}
+
+.search-popup .btn {
+  position: relative;
+
+  width: 38px;
+  height: 38px;
+  border: none;
+  padding: 0;
+
+  background-color: #f2f2f2;
+}
+
+.search-popup .btn:hover,
+.search-popup .btn:focus {
+  outline: none;
+  background-color: #ebebeb;
+}
+
+.search-popup .btn:active {
+  outline: none;
+}
+.search-popup .btn:first-of-type {
+  margin-left: 40px;
+}
+
+.search-popup .btn:nth-of-type(3) {
+  margin-left: 27px;
+}
+
+.search-popup .btn-minus::before {
+  position: absolute;
+  top: 19px;
+  left: 14px;
+
+  width: 11px;
+  height: 3px;
+  content: "";
+
+  background-color: #a9a9a9;
+}
+
+.search-popup .btn-plus::before {
+  position: absolute;
+  top: 19px;
+  left: 14px;
+
+  width: 11px;
+  height: 3px;
+  content: "";
+
+  background-color: #a9a9a9;
+}
+
+.search-popup .btn-plus::after {
+  position: absolute;
+  top: 15px;
+  left: 18px;
+
+  width: 3px;
+  height: 11px;
+  content: "";
+
+  background-color: #a9a9a9;
+}
+
+.search-popup .btn-minus:hover::before,
+.search-popup .btn-plus:hover::before,
+.search-popup .btn-plus:hover::after,
+.search-popup .btn-minus:focus::before,
+.search-popup .btn-plus:focus::before,
+.search-popup .btn-plus:focus::after {
+  background-color: #000000;
+}
+
+.search-popup .btn-minus:active::before,
+.search-popup .btn-plus:active::before,
+.search-popup .btn-plus:active::after {
+  background-color: #81b3d2;
+}
+
+.search-popup button[type="submit"] {
+  width: 458px;
+  padding: 16px 50px;
+  margin-top: 26px;
+  border: none;
+
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+
+  background-color: #81b3d2;
+}
+
+.search-popup button[type="submit"]:hover,
+.search-popup button[type="submit"]:focus {
+  outline: none;
+  background-color: #669ec0;
+}
+
+.search-popup button[type="submit"]:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
+}
+
+.search-map {
+  width: 100%;
+  height: 593px;
+  overflow: hidden;
+
+  background-color: #F3F2EF;
+  background-image: url("../img/map.jpg");
+  background-size: 1200px 593px;
 }
 
 .visually-hidden {
