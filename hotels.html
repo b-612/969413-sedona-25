@@ -64,8 +64,14 @@
             <fieldset class="ranges-fieldset">
               <legend>Стоимость в сутки (Р):</legend>
               <div class="filter-ranges">
-                <input type="text" name="price-from" value="От 0">
-                <input type="text" name="price-up" value="До 3000">
+                <div class="ranges-inputs">
+                  <label>От
+                    <input type="text" name="price-from" value="0">
+                  </label>
+                  <label>До
+                    <input type="text" name="price-up" value="3000">
+                  </label>
+                </div>
                 <div class="ranges-buttons">
                   <button type="button" name="btn-low"><span class="visually-hidden">Минимальная цена</span></button>
                   <button type="button" name="btn-up"><span class="visually-hidden">Максимальная цена</span></button>
@@ -77,18 +83,29 @@
         </section>
         <section class="results">
           <h2 class="visually-hidden">Результаты поиска</h2>
-          <b>Найдено:3</b>
-          <div class="results-sorting">
-            <span>Сортировка:</span>
-            <ul aria-label="Параметры сортировки">
-              <li><a href="#">По цене</a></li>
-              <li><a href="#">По типу</a></li>
-              <li><a href="#">По рейтингу</a></li>
-            </ul>
-            <ul aria-label="Параметры сортировки">
-              <li><a href="#" aria-label="По возрастанию">Здесь будет svg</a></li>
-              <li><a href="#" aria-label="По убыванию">Здесь будет svg</a></li>
-            </ul>
+          <div class="results-top">
+            <b>Найдено:3</b>
+            <div class="results-sorting">
+              <span>Сортировка:</span>
+              <ul class="sorting-params" aria-label="Параметры сортировки">
+                <li class="sorting-current"><a href="#">По цене</a></li>
+                <li><a href="#">По типу</a></li>
+                <li><a href="#">По рейтингу</a></li>
+              </ul>
+              <ul class="sorting-arrows" aria-label="Параметры сортировки">
+                <li><a class="sorting-arrow" href="#" aria-label="По возрастанию">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                    <path d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a></li>
+                <li class="current-arrow"><a class="sorting-arrow" href="#" aria-label="По убыванию">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10">
+                    <path d="M5.5 10L0 0h11"/>
+                  </svg>
+
+                </a></li>
+              </ul>
+            </div>
           </div>
           <ul class="results-hotels">
             <li>
